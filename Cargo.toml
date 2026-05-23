@@ -2,7 +2,7 @@
 name = "pizza-analysis-indonesian"
 version = "0.1.0"
 edition = "2021"
-description = "Indonesian (Bahasa Indonesia) language analysis components for Pizza search engine"
+description = "Indonesian text analysis plugin for INFINI Pizza"
 license = "MIT"
 
 [features]
