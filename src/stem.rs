@@ -62,12 +62,9 @@ fn stem_indonesian(word: &str) -> String {
 
     // Step 4: Remove common prefixes (me-, meng-, mem-, men-, meny-, di-, pe-, per-, ber-, ke-, se-, ter-)
     let prefixes: &[&str] = &[
-        "memper", "mempel",
-        "menge", "menye", "mempe",
-        "meng", "meny", "memo", "memu",
-        "mem", "men", "pen", "pem", "peng", "peny",
-        "ber", "per", "ter", "pel",
-        "di", "ke", "se", "me", "pe",
+        "memper", "mempel", "menge", "menye", "mempe", "meng", "meny", "memo", "memu", "mem",
+        "men", "pen", "pem", "peng", "peny", "ber", "per", "ter", "pel", "di", "ke", "se", "me",
+        "pe",
     ];
 
     for prefix in prefixes {

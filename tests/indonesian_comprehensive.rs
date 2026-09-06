@@ -1,7 +1,9 @@
 //! Comprehensive tests for pizza-analysis-indonesian.
 
 use pizza_analysis_indonesian::*;
-use pizza_engine::analysis::{AnalysisFactory, Token, TokenFilter};
+use pizza_engine::analysis::AnalysisFactory;
+use pizza_engine::analysis::Token;
+use pizza_engine::analysis::TokenFilter;
 
 fn make_token(term: &str) -> Token<'_> {
     Token::new(term, 0, term.len() as u32, 0)
@@ -114,7 +116,9 @@ fn stop_construction() {
 #[test]
 fn stop_filters_common_words() {
     let f = IndonesianStopFilter::new();
-    let stop_words = ["yang", "dan", "di", "dari", "ini", "itu", "dengan", "pada", "adalah", "ada"];
+    let stop_words = [
+        "yang", "dan", "di", "dari", "ini", "itu", "dengan", "pada", "adalah", "ada",
+    ];
     for word in &stop_words {
         let mut token = make_token(word);
         let (deleted, _) = f.filter(&mut token);
